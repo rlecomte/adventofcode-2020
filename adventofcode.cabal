@@ -1,0 +1,99 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 933a6e165f9f4ec1aac5527801748bfcbdfd1204f9a208bc827e05161c4eb484
+
+name:           adventofcode
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/adventofcode#readme>
+homepage:       https://github.com/githubuser/adventofcode#readme
+bug-reports:    https://github.com/githubuser/adventofcode/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/adventofcode
+
+library
+  exposed-modules:
+      Import
+      Puzzle.Day10
+      Puzzle.Day11
+      Puzzle.Day3
+      Puzzle.Day4
+      Puzzle.Day5
+      Puzzle.Day6
+      Puzzle.Day7
+      Puzzle.Day8
+      Puzzle.Day9
+      Run
+      Types
+      Util
+  other-modules:
+      Paths_adventofcode
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.11 && <10
+    , neat-interpolation
+    , parsec
+    , rio >=0.1.12.0
+    , vector
+  default-language: Haskell2010
+
+executable adventofcode-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_adventofcode
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      adventofcode
+    , base >=4.11 && <10
+    , neat-interpolation
+    , optparse-simple
+    , parsec
+    , rio >=0.1.12.0
+    , vector
+  default-language: Haskell2010
+
+test-suite adventofcode-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Day10Spec
+      Day11Spec
+      Day3Spec
+      Day4Spec
+      Day5Spec
+      Day6Spec
+      Day7Spec
+      Day9Spec
+      UtilSpec
+      Paths_adventofcode
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      adventofcode
+    , base >=4.11 && <10
+    , file-embed
+    , hspec
+    , neat-interpolation
+    , parsec
+    , rio >=0.1.12.0
+    , vector
+  default-language: Haskell2010
