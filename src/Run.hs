@@ -9,6 +9,7 @@ where
 import Import
 import qualified Puzzle.Day10 as Day10
 import qualified Puzzle.Day11 as Day11
+import qualified Puzzle.Day12 as Day12
 import qualified Puzzle.Day3 as Day3
 import qualified Puzzle.Day4 as Day4
 import qualified Puzzle.Day5 as Day5
@@ -42,4 +43,5 @@ execute input = do
     9 -> Day9.run input
     10 -> Day10.run input
     11 -> Day11.run input
+    12 -> Day12.run input
     _ -> pure ()
