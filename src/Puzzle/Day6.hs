@@ -19,9 +19,7 @@ solve :: Input -> Int
 solve (Input input) = getSum $ foldMap (Sum . groupCount . fmap T.unpack) $ L.unfoldr extractUnit $ T.lines input
   where
     isBlankLine = T.null . T.strip
-
     dropHeader = L.dropWhile isBlankLine
-
     extractUnit l =
       let l' = dropHeader l
        in bool (Just $ L.break isBlankLine l') Nothing (L.null l')

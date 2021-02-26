@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e61a1add41b2a42ae27c14075ab405b0fe331205f10312ff657d0cc038c68eca
+-- hash: bfbcfa07664ee5fdd303103a73fc03887e9eed9d994b30680f290af36e2ef871
 
 name:           adventofcode
 version:        0.1.0.0
@@ -31,6 +31,8 @@ library
       Puzzle.Day10
       Puzzle.Day11
       Puzzle.Day12
+      Puzzle.Day13
+      Puzzle.Day14
       Puzzle.Day3
       Puzzle.Day4
       Puzzle.Day5
@@ -78,6 +80,7 @@ test-suite adventofcode-test
       Day10Spec
       Day11Spec
       Day12Spec
+      Day14Spec
       Day3Spec
       Day4Spec
       Day5Spec
